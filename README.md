@@ -23,38 +23,43 @@ No terminal do VS CODE Será necessário criar uma máquina virtual e instalar a
 
 1. Para acessar a pasta, insira no Terminal :
 ```
-    $ cd (nome_da_sua_pasta)
+ cd (nome_da_sua_pasta)
 ```
 3. Após acessada , inicie um ambiente virtual :
  ```
-  $ python3 -m venv venv
+ python3 -m venv venv
 ```
 3. Para iniciar o ambiente virtual :
 ```
-   $ source ./venv/bin/activate
+source ./venv/bin/activate
 ```
 5. Para instalar as dependências da aplicação :
 ```
-  (venv)$ pip install -r requirements.txt
+ pip install -r requirements.txt
 ```
 # Configuração para acessar o Servidor e ativar o Banco de dados Padrão do DJANGO(SQlite)
 1. Ativando o banco de dados :
 ```
-(venv)$ ./manage.py migrate
+python manage.py makemigrations
+python manage.py migrate
 ```
 3. Criando o usuário Admin :
 ```
-(venv)$ ./manage.py createsuperuser
+python manage.py createsuperuser 
 ```
 5. Inserir nome , email e senha (Criar uma nova)
 6. Iniciando o Servidor :
 ```
-(venv)$ ./manage.py runserver
+python manage.py runserver
 ```
 8. O domínio para acesso da aplicação será :
 ```
-http://localhost:8000/
+http://127.0.0.1:8000/
+http://127.0.0.1:8000/admin-panel/ (PARA ARQUIVO JSON)
 ```
-
+9. Para desligar o Servidor após o uso :
+```
+ctrl + c (No terminal da aplicação)
+```
 
    
